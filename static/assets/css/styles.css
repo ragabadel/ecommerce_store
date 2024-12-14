@@ -104,7 +104,64 @@ body {
 .nav-icons a:hover {
     color: #007bff; /* Hover color for icons */
 }
+/* Hide the search box by default */
 
+/* تنسيق مربع البحث */
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    display: none;
+    margin-top: 5px;
+    position: relative;
+}
+
+.search-box input {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 16px;
+    width: 200px;
+
+}
+
+.search-box .form-label {
+    position: absolute;
+    top: -20px;
+    left: 5px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* تنسيق زر البحث */
+#search-click {
+    margin-left: 5px;
+    background-color: #007bff; /* لون الزر */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#search-click:hover {
+    background-color: #0056b3;
+}
+
+/* تنسيق الأيقونات */
+.nav-icons a {
+    text-decoration: none;
+    color: #333;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.nav-icons a:hover {
+    color: #007bff; /* لون عند التمرير */
+}
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {

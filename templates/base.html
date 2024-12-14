@@ -12,8 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Linking custom CSS file for additional styling -->
     <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
-
+    <script src="{% static 'assets/js/jquery-3.7.1.js' %}"></script>
     <script src="{% static 'assets/js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/min.js' %}"></script>
 </head>
 
 <body>
@@ -34,14 +35,14 @@
             </ul>
 
             <!-- Navigation icons -->
-            <div class="nav-icons">
+            <div class="nav-icons">   
                 <!-- Search icon -->
                 <div class="input-group">
-                    <div class="form-outline">
-                        <input type="search" id="form1" class="form-control" />
+                    <div class="form-outline search-box">
+                        <input type="search" id="form1" class="form-control" placeholder="search">
                         <label class="form-label" for="form1">بحث</label>
                     </div>
-                    <button type="button" class="btn btn-primary">
+                    <button type="button" class="btn btn-primary" id="search-click">
                         <i class="fas fa-search"></i>
                     </button>
                 </div>
@@ -98,7 +99,23 @@
     </div>
 
     <!-- JavaScript -->
-    <script src="{% static 'assets/js/main.js' %}"></script>
-</body>
+     <script src="{% static 'assets/js/min.js' %}" ></script>
+     <script>
+        $(document).ready(function () {
+            // Toggle search box visibility
+            $('#search-click').click(function () {
+                $('.search-box').toggle(); // يظهر أو يختفي عند الضغط
+            });
+
+            // البحث عند الضغط على زر "Enter"
+            $('#form1').keypress(function (e) {
+                if (e.which == 13) { // إذا تم الضغط على Enter
+                    let searchQuery = $('#form1').val(); // أخذ النص المدخل
+                    alert('بدأ البحث عن: ' + searchQuery); // يمكنك هنا استبدالها بأي عملية بحث
+                }
+            });
+        });
+    </script>
+    </body>
 
 </html>

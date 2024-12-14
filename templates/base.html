@@ -1,0 +1,104 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+
+    <!-- Linking Google Fonts (Roboto) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Linking custom CSS file for additional styling -->
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+
+    <script src="{% static 'assets/js/jquery-3.7.1.min.js' %}"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Navbar section -->
+        <nav class="navbar">
+            <div class="logo">
+                <!-- Logo image -->
+                <img src="{% static 'assets/images/logo.svg' %}" alt="Huawei Logo">
+            </div>
+
+            <!-- Navigation links -->
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">about</a></li>  
+            </ul>
+
+            <!-- Navigation icons -->
+            <div class="nav-icons">
+                <!-- Search icon -->
+                <div class="input-group">
+                    <div class="form-outline">
+                        <input type="search" id="form1" class="form-control" />
+                        <label class="form-label" for="form1">بحث</label>
+                    </div>
+                    <button type="button" class="btn btn-primary">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
+        
+
+        <footer>
+            <div class="footer-content">
+                <!-- left -->
+                <div class="payment-section">
+                    <div class="payment-container">
+                        <div class="heading">Cards supported :</div>
+                        <ul class="payment-icons">
+                            <li>
+                                <img class="img-lazy show success-img" alt="" src="{% static 'assets/images/meezapay.png' %}">
+                            </li>
+                            <li>
+                                <img class="img-lazy show success-img" alt="" src="{% static 'assets/images/mastercard-logo.png' %}">
+                            </li>
+                            <li>
+                                <img class="img-lazy show success-img" alt="" src="{% static 'assets/images/visa-logo.png' %}">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- center -->
+                <div class="footer-center">
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Statement</a>
+                    <a href="#">Cookie</a>
+                </div>
+
+                <!--  right  -->
+                <div class="icons-right">
+                    <div class="heading">Follow Us:</div>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-x"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+
+            <!-- Footer Copyright -->
+            <div class="footer-bottom">
+                <span>&#169; 2024 Huawei Device Co., Ltd. All rights reserved.</span>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>

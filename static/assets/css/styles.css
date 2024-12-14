@@ -1,0 +1,270 @@
+/* Reset body margin and set default font */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #eef0f3; /* Lighter Gray for a cleaner look */
+    font-family: 'Roboto', sans-serif; /* Set default font */
+    display: flex;
+    flex-direction: column; /* Arrange elements vertically */
+    align-items: center; /* Center elements horizontally */
+    justify-content: flex-start; /* Align from the top */
+    min-height: 100vh; /* Full viewport height */
+    direction: ltr;
+}
+
+/* Main container */
+.container {
+    background-color: #ffffff; /* White background for better contrast */
+    width: 100%;
+    max-width: 1200px; /* Maintain layout within this width */
+    padding: 20px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    border-radius: 10px; /* Rounded corners for a modern look */
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff; /* White navbar */
+    padding: 10px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Rounded corners for the navbar */
+    width: 100%;
+    margin-bottom: 20px; /* Add spacing below navbar */
+}
+
+/* Logo image */
+.logo img {
+    height: 30px; /* Slightly larger logo for better visibility */
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none; /* Remove list styling */
+    display: flex;
+    gap: 20px; /* Space between items */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation link items */
+.nav-links li {
+    display: inline;
+    position: relative;
+}
+
+/* Navigation link styles */
+.nav-links a {
+    text-decoration: none;
+    color: #333; /* Slightly darker text for better readability */
+    font-weight: bold;
+    padding-bottom: 5px;
+    position: relative;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Add hover effect for links */
+.nav-links a:hover {
+    color: #007bff; /* Add a blue hover effect */
+}
+
+/* Underline effect */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #007bff; /* Blue underline */
+    bottom: 0;
+    left: 50%;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Navigation icons */
+.nav-icons {
+    display: flex; /* Ensure icons are displayed in a row */
+    align-items: center; /* Align icons vertically */
+}
+
+.nav-icons a {
+    margin-left: 15px;
+    font-size: 18px; /* Slightly larger icons */
+    color: #333; /* Default color */
+    transition: color 0.3s ease;
+}
+
+.nav-icons a:hover {
+    color: #007bff; /* Hover color for icons */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px; /* Adjust spacing for smaller screens */
+        margin-bottom: 10px; /* Add space below links */
+    }
+
+    .nav-icons {
+        justify-content: center; /* Center icons for smaller screens */
+    }
+}
+
+
+
+/* Footer content */
+footer {
+    background-color: #f8f9fa; /* Very light gray for footer */
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+    width: 98%;
+    display: flex;
+    flex-direction: column; /* Stack everything vertically */
+    margin-top: 20px;
+    border-top: 1px solid #ddd; /* Add subtle border at the top */
+}
+
+/* Footer content */
+.footer-content {
+    display: flex;
+    justify-content: space-between; /* Space between groups */
+    align-items: center; /* Center items vertically */
+    max-width: 1200px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 19px; /* Add space between groups */
+}
+
+/* Social and Payment Icons Group right*/
+
+
+.icons-right {
+    display: flex;
+    gap: 15px; /* Space between social and payment icons */
+    align-items: center; /* Align vertically */
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0;
+}
+.icons-right .heading {
+    margin-bottom: 20px; /* Adjust margin for the heading */
+    padding: 0;
+    margin: 0;
+    
+}
+
+/* Social media icons */
+.social-icons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px; /* Space between social icons */
+}
+
+
+
+.social-icons a {
+    font-size: 18px;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff; /* Highlight on hover */
+}
+
+
+/* Align content to the left using flexbox */
+.payment-section {
+    display: flex;
+    justify-content: flex-start; /* Aligns content to the left */
+    padding: 10px;
+}
+
+/* Container styling */
+.payment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+}
+
+/* Heading styling: adding margin-bottom to create space between the heading and icons */
+.payment-container .heading {
+    margin-bottom: 15px; /* Add space between "Cards supported" and the icons */
+}
+
+/* Payment icons list styling */
+.payment-icons {
+    display: flex;
+    gap: 15px; /* Space between icons */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* General icon styling */
+.payment-icons li img {
+    width: 40px; /* Set icon size */
+    height: auto;
+}
+
+/* Footer center links */
+.footer-center {
+    display: flex;
+    gap: 10px; /* Space between links */
+    font-size: 14px;
+    justify-content:center;
+}
+
+.footer-center a {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-center a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+
+
+/* Footer bottom */
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #777;
+    margin-top: 10px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        gap: 10px;
+    }
+
+    .icons-group {
+        justify-content: center; /* Center icons group on smaller screens */
+    }
+
+    .social-icons,
+    .payment-icons,
+    .footer-right {
+        justify-content: center; /* Center items for smaller screens */
+    }
+}
